@@ -1,0 +1,50 @@
+html{
+    font-size: 25px;
+}
+
+body{
+    background-color: darkgray;
+    font-family: "Nothing You Could Do", cursive;
+}
+
+p{
+    text-align: center;
+    margin: 2% 25% 0%;
+}
+
+button{
+    font-size: 0.9rem;
+    font-family: "Merriweather", serif;
+    font-style: italic;
+    background-color: #808080;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+
+.center-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content{
+    padding: 25px;
+}
+
+
+.slide{
+    display: none;
+}
+
+
+.controls{
+    text-align: center;
+    margin: 25px;
+}
