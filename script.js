@@ -82,16 +82,6 @@ function wrongChoice(keyword) {
     }
 }
 
-//play bg music
-const musicPlay1 = document.getElementById("startBGM1");
-const musicPlay2 = document.getElementById("startBGM2");
-const bgm1 = new Audio('assets/sounds/The-Shifting-Mound_(Movement-II)_Brandon-Boone.ogg');
-const bgm2 = new Audio('assets/sounds/the_shifting_mound_v.ogg');
-const bgm3 = new Audio('assets/sounds/reborn.ogg');
-
-musicPlay1.addEventListener("click", () => { bgm1.play() })
-//musicPlay2.addEventListener("click", () => { bgm2.play() })
-
 // page turn sound effect
 const page = new Audio('assets/sounds/pageturn.ogg');
 const story = document.querySelectorAll(".storyButtons");

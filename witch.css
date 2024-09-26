@@ -94,3 +94,39 @@ a:hover{
     font-size: 2rem;
     margin-bottom: 30px;
 }
+
+.mobileButton{
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+}
+
+.mobileButton-flex{
+    display: none;
+}
+
+
+/*small screen size*/
+@media (max-width: 1000px){
+    html{
+        font-size: 50px;
+    }
+    p{
+        margin: 2% 10% 0%;
+    }
+    img {
+        width: 100%;
+    }
+    .mobileText{
+        display: none;
+    }
+    .mobileButton{
+        display: block;
+    }
+    .mobileButton-flex{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    }
+}
