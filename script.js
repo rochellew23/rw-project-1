@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger, TextPlugin)
+    // choice page animations
+    let choiceAnime=gsap.timeline({delay:2})
+    choiceAnime.from('#choiceImage', { opacity: 0, duration: 3 })
+    .from('.choiceText', {
+        opacity:0,
+        duration:1,})
+    .to('#turnRed', {color:'#800000', duration:1});
+
     //start page animation timeline
     let titleAnime = gsap.timeline({ delay: 1.5, });
     titleAnime.to('#title', {
@@ -47,14 +55,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     red.forEach(function (text) {
         ["click", "mousemove"].forEach((event) => {
             text.addEventListener(event, () => {
-            gsap.to(text, { color: '#800000', duration: 1.3 });
-            console.log('text clicked!')
+                gsap.to(text, { color: '#800000', duration: 1.3 });
+                console.log('text clicked!')
             })
         })
     })
-
-    //choice.html animations
-    let choiceAnime = gsap.timeline();
 });
 
 //play bg music
