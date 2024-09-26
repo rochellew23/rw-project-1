@@ -43,10 +43,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     next.addEventListener("click", function divs() { plusDivs(1) })
 
     //red text animations
-    const red = document.querySelectorAll(".turnRed");
+    const red = document.querySelectorAll(".turnToRed");
     red.forEach(function (text) {
-        text.addEventListener('click', () => {
-            gsap.to()
+        ["click", "mousemove"].forEach((event) => {
+            text.addEventListener(event, () => {
+            gsap.to(text, { color: '#800000', duration: 1.3 });
+            console.log('text clicked!')
+            })
         })
     })
 
@@ -58,7 +61,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 const musicPlay1 = document.getElementById("startBGM1");
 const bgm1 = new Audio('assets/sounds/The-Shifting-Mound_(Movement-II)_Brandon-Boone.ogg');
 
-musicPlay1.addEventListener("click", ()=>{bgm1.play()})
+musicPlay1.addEventListener("click", () => { bgm1.play() })
 
 // page turn sound effect
 const page = new Audio('assets/sounds/pageturn.ogg');
