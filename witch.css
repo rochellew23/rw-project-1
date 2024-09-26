@@ -28,6 +28,45 @@ button:hover{
     color: black;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: black;
+}
+
+#title{
+    text-align: center;
+    font-family: "Merriweather", serif;
+    font-size: 6rem;
+}
+
+#intro{
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+}
+
+#startButton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 50px;
+    font-size: 1.4rem;
+}
+
+#ending-button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .center-image{
     display: block;
     margin-left: auto;
@@ -41,10 +80,17 @@ button:hover{
 
 .slide{
     display: none;
+    position: relative;
 }
 
 
 .controls{
     text-align: center;
     margin: 25px;
+}
+
+#StartOver p{
+    font-family: "Merriweather", serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
 }

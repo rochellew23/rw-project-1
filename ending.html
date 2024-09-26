@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Witch</title>
-        <meta name="description" content="Roughly 155 characters">
-        <link rel="stylesheet" type="text/css" href="witch.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
-        <script src="script.js"></script>
-    </head>
-    <body>
 
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>Witch</title>
+    <meta name="description" content="Roughly 155 characters">
+    <link rel="stylesheet" type="text/css" href="witch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Nothing+You+Could+Do&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="slideshow">
+            <div class="slide">
+                <img class="center-image" src="assets/images/end-1(1).png">
+                <p>“S-so you're my fiancée? Um… I’m Lew-” “Lewis Layton. I’m well aware of who you are.”</p>
+            </div>
+            <div class="slide">
+                <img class="center-image" src="assets/images/end-2(1).png">
+                <p>“Oh! Th-that makes sense. I-is white your favorite color? You’re dressed head to toe in it.” “Yes. It
+                    is.”</p>
+            </div>
+            <div class="slide">
+                <img class="center-image" src="assets/images/end-3(1).png">
+                <p>“Sorry! That was a weird question to ask! I mean, you probably know so much about me and I don’t even
+                    know your name! The only thing I know about you is that you’re a-” “Unhuman?” “U-uh yes.”</p>
+            </div>
+            <div class="slide ending">
+                <img class="center-image" src="assets/images/end-4(1).png">
+                <p>“Well then, allow me to introduce myself. My name is Evangeline Drewitt. I am your soon-to-be wife,
+                    I’m also a witch. It’s nice to meet you, too. <span class="turnToRed">We’re going to have so fun together.</span>”</p>
+                <div id="StartOver">
+                    <p>THE END</p>
+                    <button id="ending-button" type="button"><a href="index.html">Start Over</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="backButton" class="storyButtons" type="button">❮ Prev</button>
+            <button id="nextButton" class="storyButtons" type="button">Next ❯</button>
+        </div>
+        
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+</body>
+
 </html>
