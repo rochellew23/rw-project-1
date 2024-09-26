@@ -14,7 +14,7 @@ The way users interact with the page is through clicking. You click to go throug
 ### Responsive Design
 When the screen size is small, the HTML image maps are removed and replaced with buttons because of the limitations of how the HTML image maps work.
 ## Live Demo
-Link: rochellew23.github.io/rw-project-1/
+Link: https://rochellew23.github.io/rw-project-1/
 ## Credits
 Images: All drawn by me<br>
 Sound Effects: Pixabay<br>
