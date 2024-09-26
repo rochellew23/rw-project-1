@@ -15,7 +15,7 @@
 <body>
     <div class="main-content">
         <div class="slideshow">
-            <div class="slide" id="startBGM1">
+            <div class="slide">
                 <img class="center-image" src="assets/images/scene-1.png">
                 <p><span class="turnToRed">"Witches are not born, they are created."</span> This simple sentence is the
                     answer to the question
@@ -56,14 +56,18 @@
                     matter if I am not the same person after this.<span class="turnToRed">I will be a witch.</span>
                     That's all that matters. I can do
                     this. I will do this.<br><span class="mobileText">(Click on the dagger to make the sacrifice)</span></p>
+                    <button class="mobileButton"><a href="choice.html">Make the Sacrifice</a></button>
             </div>
         </div>
         <div class="controls">
             <button id="backButton" class="storyButtons" type="button">❮ Prev</button>
             <button id="nextButton" class="storyButtons" type="button">Next ❯</button>
         </div>
-
     </div>
+    <div class="audioControls">
+        <audio src="assets/sounds/The-Shifting-Mound_(Movement-II)_Brandon-Boone.ogg" controls></audio>
+    </div>
+    
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>

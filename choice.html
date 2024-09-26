@@ -21,8 +21,18 @@
                 <area target="" alt="leg" id="leg" title="my leg?" onclick="wrongChoice('leg')" href="#" coords="411,503,454,577" shape="rect"></area>
             </map>
             <div class="choiceText">
-                <p><span id="turnRed">I know what I will sacrifice.</span> <br>(Click on the body the part she has chosen)</p>
+                <p><span id="turnRed">I know what I will sacrifice.</span> <br><span class="mobileText">(Click on the body the part she has chosen)</span></p>
+                <div class="mobileButton-flex">
+                    <button><a href="ending.html">my eye?</a></button>
+                    <button onclick="wrongChoice('mouth')">my tongue?</button>
+                    <button onclick="wrongChoice('heart')">my heart?</button>
+                    <button onclick="wrongChoice('arm')">my arm?</button>
+                    <button onclick="wrongChoice('leg')">my leg?</button>
+                </div>
             </div>
+        </div>
+        <div class="audioControls">
+            <audio src="assets/sounds/the_shifting_mound_v.ogg" controls></audio>
         </div>
     
         <script src="script.js"></script> 

@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger, TextPlugin)
-    const bgm2 = new Audio('assets/sounds/the_shifting_mound_v.ogg');
     // choice page animations
-    let choiceAnime=gsap.timeline({delay:2, onStart: ()=>{bgm2.play()},})
+    let choiceAnime = gsap.timeline({ delay: 1.5, onStart: playBGM2()})
     choiceAnime.from('#choiceImage', { opacity: 0, duration: 3 })
-    .from('.choiceText', {
-        opacity:0,
-        duration:1,})
-    .to('#turnRed', {color:'#800000', duration:1});
+        .from('.choiceText', {
+            opacity: 0,
+            duration: 1,
+        })
+        .to('#turnRed', { color: '#800000', duration: 1 });
 
     //start page animation timeline
     let titleAnime = gsap.timeline({ delay: 1.5, });
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
         .to('#intro', {
             duration: 3,
-            text: "What would you sacrifice for power?",
+            text: "What would you do for power?",
             ease: "steps(20)",
         })
         .from('#startButton', {
@@ -82,16 +82,6 @@ function wrongChoice(keyword) {
             break;
     }
 }
-
-//play bg music
-const musicPlay1 = document.getElementById("startBGM1");
-const musicPlay3 = document.getElementById("startBGM3");
-const bgm1 = new Audio('assets/sounds/The-Shifting-Mound_(Movement-II)_Brandon-Boone.ogg');
-//const bgm2 = new Audio('assets/sounds/the_shifting_mound_v.ogg');
-const bgm3 = new Audio('assets/sounds/reborn.ogg');
-
-musicPlay1.addEventListener("click", () => { bgm1.play() })
-musicPlay3.addEventListener("click", () => { bgm3.play() })
 
 // page turn sound effect
 const page = new Audio('assets/sounds/pageturn.ogg');
