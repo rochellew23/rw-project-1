@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger, TextPlugin)
+    const bgm2 = new Audio('assets/sounds/the_shifting_mound_v.ogg');
     // choice page animations
-    let choiceAnime=gsap.timeline({delay:2})
+    let choiceAnime=gsap.timeline({delay:2, onStart: ()=>{bgm2.play()},})
     choiceAnime.from('#choiceImage', { opacity: 0, duration: 3 })
     .from('.choiceText', {
         opacity:0,
@@ -84,13 +85,13 @@ function wrongChoice(keyword) {
 
 //play bg music
 const musicPlay1 = document.getElementById("startBGM1");
-const musicPlay2 = document.getElementById("startBGM2");
+const musicPlay3 = document.getElementById("startBGM3");
 const bgm1 = new Audio('assets/sounds/The-Shifting-Mound_(Movement-II)_Brandon-Boone.ogg');
-const bgm2 = new Audio('assets/sounds/the_shifting_mound_v.ogg');
+//const bgm2 = new Audio('assets/sounds/the_shifting_mound_v.ogg');
 const bgm3 = new Audio('assets/sounds/reborn.ogg');
 
 musicPlay1.addEventListener("click", () => { bgm1.play() })
-//musicPlay2.addEventListener("click", () => { bgm2.play() })
+musicPlay3.addEventListener("click", () => { bgm3.play() })
 
 // page turn sound effect
 const page = new Audio('assets/sounds/pageturn.ogg');
