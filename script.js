@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     function showDivs(n) {
         let x = document.getElementsByClassName("slide");
-        if (n > x.length) { slideIndex = 1};
+        if (n > x.length) { slideIndex = 1 };
         if (n < 1) { slideIndex = x.length };
         for (let i = 0; i < x.length; i++) {
             x[i].style.display = "none";
             //gsap.to(x[i], {opacity: 0})
         };
         x[slideIndex - 1].style.display = "block";
-        gsap.from(x[slideIndex - 1], {x: 1500, duration: 1.5 });
+        gsap.from(x[slideIndex - 1], { x: 1500, duration: 1.5 });
     };
 
     function plusDivs(n) {
@@ -44,19 +44,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     //red text animations
     const red = document.querySelectorAll(".turnRed");
-    red.array.forEach(text => { turnRed = () => {
-        gsap.to(text, {color: "#800000", duration: 1.3})
-    }
-        
-    });
+    red.forEach(function (text) {
+        text.addEventListener('click', () => {
+            gsap.to()
+        })
+    })
 
     //choice.html animations
     let choiceAnime = gsap.timeline();
 });
 
+//play bg music
+const musicPlay1 = document.getElementById("startBGM1");
+const bgm1 = new Audio('assets/sounds/The-Shifting-Mound_(Movement-II)_Brandon-Boone.ogg');
+
+musicPlay1.addEventListener("click", ()=>{bgm1.play()})
+
+// page turn sound effect
 const page = new Audio('assets/sounds/pageturn.ogg');
 const story = document.querySelectorAll(".storyButtons");
 
-story.forEach(function(button){
-    button.addEventListener('click', ()=>{page.play()})
+story.forEach(function (button) {
+    button.addEventListener('click', () => { page.play() })
 });
