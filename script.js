@@ -29,11 +29,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         if (n < 1) { slideIndex = x.length };
         for (let i = 0; i < x.length; i++) {
             x[i].style.display = "none";
+            //gsap.to(x[i], {opacity: 0})
         };
         x[slideIndex - 1].style.display = "block";
-        let turnRed = gsap.timeline();
-        turnRed.from(x[slideIndex - 1], {x: 1500, duration: 1 })
-        .to('.turnToRed', {color: "#660000", delay: 1.2});
+        gsap.from(x[slideIndex - 1], {x: 1500, duration: 1.5 });
     };
 
     function plusDivs(n) {
@@ -43,31 +42,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
     back.addEventListener("click", function divs() { plusDivs(-1) })
     next.addEventListener("click", function divs() { plusDivs(1) })
 
+    //red text animations
+    const red = document.querySelectorAll(".turnRed");
+    red.array.forEach(text => { turnRed = () => {
+        gsap.to(text, {color: "#800000", duration: 1.3})
+    }
+        
+    });
+
     //choice.html animations
     let choiceAnime = gsap.timeline();
-    /*
-    const page = new Audio('assets/sounds/pageturn.ogg');
-    // page turn sounds when button is pressed
-    
-
-    for (let i = 0; i < turn.length; i++) {
-        let audioButton = turn[i];
-        audioButton.addEventListener('click', () => {
-            page.play();
-            console.log("button clicked")
-        })
-        
-    }
-        */
 });
 
-/*
-const page = document.getElementById("pageTurn");
-const turn = document.querySelectorAll(".storyButton");
+const page = new Audio('assets/sounds/pageturn.ogg');
+const story = document.querySelectorAll(".storyButtons");
 
-function playPage() {
-    page.play();
-}
-
-turn.addEventListener('click', function play() { playPage() });
-*/
+story.forEach(function(button){
+    button.addEventListener('click', ()=>{page.play()})
+});
